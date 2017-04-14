@@ -1,0 +1,19 @@
+--- Discuss scrolling vs. static levels.
+
+-- 	Create first levels
+-- 	Make new (or just updated) title screen.
+-- 	Make new sprites for Victor.
+-- 	Implement new gravity.
+-- 	Decide on new sound effects / music?
+-- 	Go through old code and optimize / make more readable.
+
+- 	Figure out how to draw text in a non-retarded way.
+- 	Get rid of extraneous shit from git repo (old folders).
+
+MECHANICS:
+
+- You start off the levels with Numpy on your back
+- When he is on your back you do not lose health but you cannot invert
+- You can throw him off your back into a wall / ceiling in a fixed arc
+- To regain Numpy, you can either collide with him or teleport to him
+- Once Numpy is regained you replenish you HP bar

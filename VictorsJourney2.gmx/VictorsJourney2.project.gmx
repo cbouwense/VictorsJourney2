@@ -97,9 +97,9 @@
     <room>rooms\title_screen</room>
     <room>rooms\credits</room>
     <room>rooms\level_select</room>
+    <room>rooms\start_room</room>
     <room>rooms\level1</room>
     <room>rooms\empty</room>
-    <room>rooms\start_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
