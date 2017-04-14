@@ -86,12 +86,12 @@ if (obj_victor.inversions &gt;= 10) { // draw number more left because double di
     angle = 0;
 }
 
-if (obj_victor.visible &amp;&amp; room != end_room) {
+if (obj_victor.visible) {
     draw_text_transformed(draw_x, draw_y, string(obj_victor.inversions), 1, 1, angle);
 }
 
 // Timer
-
+/*
 if (room != end_room) {
     timer_x = 32;
     timer_y = 32;
@@ -125,6 +125,7 @@ else {
         draw_text_transformed(timer_x + 16, timer_y, string(global.seconds), 2, 2, 0);
     }
 }
+*/
 </string>
           </argument>
         </arguments>

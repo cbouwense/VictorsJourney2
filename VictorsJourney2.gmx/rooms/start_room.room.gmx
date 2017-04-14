@@ -10,13 +10,10 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.room = 16;
-
-global.spawn_x = 576;
+  <code>global.spawn_x = 576;
 global.spawn_y = 528;
 
 global.grav = 0.4;
-global.grav_on = true;
 
 global.dim = 1;
 global.inversions = 5;
@@ -148,6 +145,7 @@ global.blocksVisible = true;</code>
     <instance objName="obj_dim1" x="0" y="640" name="inst_A5AE35D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dim1" x="0" y="704" name="inst_D5666A4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dim1" x="0" y="768" name="inst_B3E4935B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goal" x="736" y="480" name="inst_785739B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

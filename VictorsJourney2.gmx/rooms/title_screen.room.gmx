@@ -14,7 +14,13 @@
     audio_play_sound(music, 1, true);
 }
 global.seconds = 0;
-global.minutes = 0;</code>
+global.minutes = 0;
+
+global.level_idx = 0;
+
+// Might want to change the rooms included in this array
+global.levels[0] = start_room;
+global.levels[1] = level1;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

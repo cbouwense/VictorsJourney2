@@ -1,2 +1,8 @@
---- 0.1 ---
+--- 0.0.1 ---
 
++ Made "F" keybind for throwing Numpy and "G" for teleporting.
+
+/ Revamped gravity so your acceleration is a function of your current speed (which entails a terminal velocity as well). 
+/ Changed level swapping by putting all of the rooms in an array.
+
+- Removed WASD controls.

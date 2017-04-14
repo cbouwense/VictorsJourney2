@@ -140,23 +140,14 @@ dim = global.dim;
             <string>/// Frame logic
 
 // Get the player's input
-if  (keyboard_check(ord("D")) == 0)
-    key_right = keyboard_check(vk_right);
-else
-    key_right = keyboard_check(ord("D")); // 1 or 0   |   ord("D")+
-    
-if  (keyboard_check(ord("A")) == 0)
-    key_left = -keyboard_check(vk_left);
-else
-    key_left = -keyboard_check(ord("A"));  // -1 or 0
-    
-if (keyboard_check(ord("W")) == 0)
-    key_jump = keyboard_check_pressed(vk_up);
-else
-    key_jump = keyboard_check(ord("W"));
 
+key_right = keyboard_check(vk_right);
+key_left = -keyboard_check(vk_left);
+key_jump = keyboard_check_pressed(vk_up);
 key_change_dim = keyboard_check_pressed(vk_space);
 key_reset = keyboard_check_pressed(ord("R"));
+key_throw = keyboard_check_pressed(ord("F"));
+key_teleport = keyboard_check_pressed(ord("G"));
 
 // React to inputs
 if (key_reset == 1) {
@@ -174,9 +165,13 @@ move = key_right + key_left;
 
 hsp = move * movespeed;
 
-vsp += grav;
+// Negative is upward movement and positive is downwards
+vsp += grav - (vsp/67);
+show_debug_message(string(vsp));
 
+// Jumping and sprite logic
 if (vcolliding()) {
+    // Jumping
     if (key_jump == 1) {
         audio_play_sound(snd_jump, 2, false);
     }
@@ -186,13 +181,22 @@ if (vcolliding()) {
     else {
         vsp = key_jump * jumpspeed;
     }
+    // Sprite
+    if (move != 0) {
+        change_spr_run();
+    }
+    else {
+        change_spr_idle();
+    }
 }
 else {
     change_spr_air();
 }
 
+// Inversion logic
 if (inversions &gt; 0 &amp;&amp; key_change_dim == 1) {
     if (inversions == 1) {
+        // What is this...
         global.fuckyou = true;
     }
     audio_play_sound(snd_change_dim, 2, false);
@@ -203,14 +207,13 @@ if (inversions &gt; 0 &amp;&amp; key_change_dim == 1) {
         dim -= key_change_dim;
     }
     change_spr_dim();
-    if (global.grav_on) {
-        grav *= -1;
-        image_yscale *= -1;
-    }
+    grav *= -1;
+    image_yscale *= -1;
     global.blocksVisible = !global.blocksVisible;
     inversions--;
 }
 else {
+    // What does this even DO??
     global.fuckyou = false;
 }
 
@@ -297,28 +300,14 @@ if (place_meeting(x, y, obj_oob)) {
 }
 
 // Update sprite
+// What does this even do...
 if (move != 0) {
     image_xscale = move;
-}
-
-// Change sprites based on location
-if (vcolliding()) {
-    if (move != 0) {
-        change_spr_run();
-    }
-    else {
-        change_spr_idle();
-    }
-}
-else {
-    change_spr_air();
 }
 
 // Update Position
 x += hsp;
 y += vsp;
-
-
 </string>
           </argument>
         </arguments>

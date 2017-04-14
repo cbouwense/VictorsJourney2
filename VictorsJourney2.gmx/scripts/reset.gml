@@ -1,7 +1,6 @@
 audio_play_sound(snd_die, 1, false);
 
 global.resetVisibility = true;
-
 visible = false;
 moveable = false;
 
@@ -13,9 +12,7 @@ y = global.spawn_y;
 
 hsp = 0;
 vsp = 0;
-
 grav = global.grav;
-
 dim = global.dim;
 inversions = global.inversions;
 
