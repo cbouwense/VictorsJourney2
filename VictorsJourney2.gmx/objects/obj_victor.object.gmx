@@ -35,31 +35,6 @@ moveable = false;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Alarm to go to next room
-show_debug_message("tried to go to next room");
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -77,7 +52,9 @@ show_debug_message("tried to go to next room");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>visible = true;
+            <string>/// Name This
+
+visible = true;
 moveable = true;
 
 global.blocksVisible = true;
@@ -110,7 +87,7 @@ visible = true;
 moveable = true;
 hsp = 0;
 vsp = 0;
-jumpspeed = 10;
+jumpspeed = 11.5;
 movespeed = 5;
 inversions = global.inversions;
 grav = global.grav;
