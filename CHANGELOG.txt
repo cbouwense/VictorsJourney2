@@ -1,3 +1,12 @@
+--- 0.0.3 ---
+
++ Implemented aiming, throwing, sticking, throwing, and returning Numpy.
++ Made inverting only possible once Numpy is thrown.
+
+--- 0.0.2 ---
+
+/ Tweaked the initial jump speed to 11.5 to jump a little higher.
+
 --- 0.0.1 ---
 
 + Made "F" keybind for throwing Numpy and "G" for teleporting.

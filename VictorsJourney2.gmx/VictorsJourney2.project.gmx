@@ -66,6 +66,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_victor</object>
+    <object>objects\obj_numpy</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_goal</object>
     <object>objects\obj_dim1</object>

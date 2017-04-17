@@ -1,18 +1,19 @@
---- Discuss scrolling vs. static levels.
----	Implement new gravity.
+---	Implement camera.
+---	Implement health and regeneration.
+--- Make Numpy relative to the way you're facing (upside down?).
 
--- 	Make new (or just updated) title screen.
--- 	Make new sprites for Victor.
--- 	Decide on new sound effects / music
+--	Make new sprites for Victor with Numpy.
+--	Make animation for Victor throwing and teleporting to Numpy?
+--	Make sprite / animation for Numpy flying in the air?
+--	Decide on new sound effects / music.
 --	Fix bug where Victor's head gets stuck flying vertically into wall.
 
+-	Make new (or just updated) title screen.
 -	Go through old code and optimize / make more readable.
-- 	Figure out how to draw text in a non-retarded way.
-- 	Get rid of extraneous shit from git repo (old folders).
+-	Figure out how to draw text in a non-retarded way.
 -	Decide where to put out-of-bound hitboxes.
-- 	Replace blocks of one type of object with single object.
--	Implement ability to inversions or not.
-- 	Decide if we want a timer.
+-	Replace blocks of one type of object with single object?
+-	Decide if we want a timer.
 -	Do we want to be able to go back and forth through level doors?
 
 MECHANICS:

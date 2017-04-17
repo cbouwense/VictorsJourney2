@@ -1,3 +1,5 @@
+global.reset_numpy = true;
+show_debug_message("set victor_reset true");
 audio_play_sound(snd_die, 1, false);
 
 global.resetVisibility = true;
