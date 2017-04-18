@@ -49,7 +49,7 @@ time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (time % 1 == 0 &amp;&amp; obj_victor.numpy_out &amp;&amp; obj_numpy.thrown) {
+            <string>if (time % 100 == 0 &amp;&amp; obj_victor.numpy_out &amp;&amp; obj_numpy.thrown) {
     image_index++;
 }
 else if (!obj_victor.numpy_out || image_index == 128) {
@@ -62,10 +62,20 @@ if (time == 150) {
 
 x = obj_victor.x;
 if (in_air()) {
-    y = obj_victor.y - 56;
+    if (obj_victor.image_yscale == 1) {
+        y = obj_victor.y - 48;
+    }
+    else {
+        y = obj_victor.y + 48;
+    }
 }
 else {
-    y = obj_victor.y - 80;   
+    if (obj_victor.image_yscale == 1) {
+        y = obj_victor.y - 72;   
+    }
+    else {
+        y = obj_victor.y + 72;
+    }
 }
 
 visible = obj_victor.visible;

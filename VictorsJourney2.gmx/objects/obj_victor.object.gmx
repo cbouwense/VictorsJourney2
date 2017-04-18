@@ -182,11 +182,7 @@ if (obj_health.image_index == 127) {
 //show_debug_message("HP: " + string(health));
 
 // Inversion logic
-if (inversions &gt; 0 &amp;&amp; key_change_dim == 1 &amp;&amp; numpy_out &amp;&amp; obj_numpy.thrown) {
-    if (inversions == 1) {
-        // What is this...
-        global.fuckyou = true;
-    }
+if (key_change_dim == 1 &amp;&amp; numpy_out &amp;&amp; obj_numpy.thrown) {
     audio_play_sound(snd_change_dim, 2, false);
     if (dim == 1) {
         dim += key_change_dim;
@@ -198,7 +194,6 @@ if (inversions &gt; 0 &amp;&amp; key_change_dim == 1 &amp;&amp; numpy_out &amp;&
     grav *= -1;
     image_yscale *= -1;
     global.blocksVisible = !global.blocksVisible;
-    inversions--;
 }
 else {
     // What does this even DO??
@@ -328,17 +323,21 @@ y += vsp;
           <argument>
             <kind>1</kind>
             <string>if (!numpy_out) {
-    show_debug_message("MADE NUMPY");
     instance_create(x, y, obj_numpy);
     numpy_out = true;
 }
 else {
     if (obj_numpy.thrown) {
-        obj_victor.x = obj_numpy.x;
-        obj_victor.y = obj_numpy.y + 16;
+        if (obj_numpy.on_floor) {
+            obj_victor.x = obj_numpy.x;
+            obj_victor.y = obj_numpy.y - 41;
+        }
+        else {
+            obj_victor.x = obj_numpy.x;
+            obj_victor.y = obj_numpy.y + 16;
+        }
     }
 }
-show_debug_message("numpy_out: " + string(numpy_out));
 </string>
           </argument>
         </arguments>

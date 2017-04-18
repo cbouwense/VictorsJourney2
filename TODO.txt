@@ -1,12 +1,10 @@
---- Fix teleporting into the ground.
+---	Make numpy fall if dimension changes and he was on that dimension block.
 --- Make levels.
 
---	Make animation for Victor throwing and teleporting to Numpy?
+--	Make animation for Victor throwing and teleporting to Numpy.
 --	Should Victor keep his momentum when teleporting to Numpy?
---	Decide on new sound effects / music.
+--	Import new music.
 
--	Make new (or just updated) title screen.
+-	Make new title screen.
 -	Figure out how to draw text in a non-retarded way.
--	Decide where to put out-of-bound hitboxes.
 -	Replace blocks of one type of object with single object?
--	Should we get rid of the amount of inversions?

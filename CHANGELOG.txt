@@ -1,3 +1,12 @@
+--- 0.1.0 ---
+
++ Detection for if Numpy is on the floor, a wall, or a ceiling. Victor teleports accordingly (fixes bug where Victor teleported into floor).
++ Numpy's sprite changes depending on whether he is on the floor, on a wall, or on a ceiling.
+
+/ Health bar now is always above Victor's head whether he is upside down or not.
+
+- Got rid of the limited number of inversions per level.
+
 --- 0.0.4 ---
 
 + Added sprites for Numpy

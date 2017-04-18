@@ -26,7 +26,9 @@
     <sprite>sprites\spr_level4_text</sprite>
     <sprite>sprites\spr_level6_text</sprite>
     <sprite>sprites\spr_oob</sprite>
-    <sprite>sprites\spr_numpy</sprite>
+    <sprite>sprites\spr_numpy_sit</sprite>
+    <sprite>sprites\spr_numpy_cling</sprite>
+    <sprite>sprites\spr_numpy_flying</sprite>
     <sprite>sprites\spr_victor_run_dim1</sprite>
     <sprite>sprites\spr_victor_run_dim1_n</sprite>
     <sprite>sprites\spr_victor_idle_dim1</sprite>
