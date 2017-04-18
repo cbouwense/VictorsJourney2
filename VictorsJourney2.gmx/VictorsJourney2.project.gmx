@@ -28,11 +28,17 @@
     <sprite>sprites\spr_oob</sprite>
     <sprite>sprites\spr_numpy</sprite>
     <sprite>sprites\spr_victor_run_dim1</sprite>
+    <sprite>sprites\spr_victor_run_dim1_n</sprite>
     <sprite>sprites\spr_victor_idle_dim1</sprite>
+    <sprite>sprites\spr_victor_idle_dim1_n</sprite>
     <sprite>sprites\spr_victor_air_dim1</sprite>
+    <sprite>sprites\spr_victor_air_dim1_n</sprite>
     <sprite>sprites\spr_victor_run_dim2</sprite>
+    <sprite>sprites\spr_victor_run_dim2_n</sprite>
     <sprite>sprites\spr_victor_idle_dim2</sprite>
+    <sprite>sprites\spr_victor_idle_dim2_n</sprite>
     <sprite>sprites\spr_victor_air_dim2</sprite>
+    <sprite>sprites\spr_victor_air_dim2_n</sprite>
     <sprite>sprites\spr_victor_fucking_dies</sprite>
     <sprite>sprites\spr_victor_fucking_dies2</sprite>
     <sprite>sprites\spr_title</sprite>
@@ -43,6 +49,7 @@
     <sprite>sprites\spr_up_lvl</sprite>
     <sprite>sprites\spr_down_lvl</sprite>
     <sprite>sprites\spr_credits</sprite>
+    <sprite>sprites\spr_health</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\dim1_bkgn</background>
@@ -51,6 +58,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\reset.gml</script>
+    <script>scripts\in_air.gml</script>
     <script>scripts\vcolliding.gml</script>
     <script>scripts\next_level.gml</script>
     <script>scripts\change_spr_run.gml</script>
@@ -68,10 +76,10 @@
     <object>objects\obj_victor</object>
     <object>objects\obj_numpy</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_goal</object>
     <object>objects\obj_dim1</object>
     <object>objects\obj_dim2</object>
-    <object>objects\obj_text</object>
+    <object>objects\obj_spikes</object>
+    <object>objects\obj_goal</object>
     <object>objects\obj_level1_text</object>
     <object>objects\obj_level2_text</object>
     <object>objects\obj_level3_text</object>
@@ -84,7 +92,7 @@
     <object>objects\obj_levels</object>
     <object>objects\obj_exit</object>
     <object>objects\obj_draw</object>
-    <object>objects\obj_spikes</object>
+    <object>objects\obj_text</object>
     <object>objects\obj_tube</object>
     <object>objects\obj_credit_text</object>
     <object>objects\obj_menu</object>
@@ -94,12 +102,13 @@
     <object>objects\obj_up_lvl</object>
     <object>objects\obj_other_victor</object>
     <object>objects\obj_other_dim2</object>
+    <object>objects\obj_health</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\level1</room>
     <room>rooms\title_screen</room>
     <room>rooms\level_select</room>
     <room>rooms\start_room</room>
-    <room>rooms\level1</room>
     <room>rooms\level2</room>
     <room>rooms\empty</room>
     <room>rooms\credits</room>

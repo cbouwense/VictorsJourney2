@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>thrown = false;
 
+grav = global.grav;
+
 r = 81;
 theta = 0;
 theta_speed = 3;
@@ -54,8 +56,8 @@ theta_speed = 3;
             <kind>1</kind>
             <string>/// Frame Logic
 
-show_debug_message("numpy x: " + string(x));
-show_debug_message("numpy y: " + string(y));
+//show_debug_message("numpy x: " + string(x));
+//show_debug_message("numpy y: " + string(y));
 
 // Setup 
 
@@ -63,14 +65,23 @@ if (!thrown) {
 
     theta += theta_speed;
     if (theta &gt;= 360) theta -= 360;
-    x = obj_victor.x + lengthdir_x(r, theta);
-    y = obj_victor.y + lengthdir_y(r, theta);
-    
-    if (y == obj_victor.y - r) {
-        theta_speed *= -1;
+    if (obj_victor.image_xscale == 1) { // facing right
+        x = obj_victor.x + lengthdir_x(r, theta);
+    }
+    else { // facing left
+        x = obj_victor.x - lengthdir_x(r, theta);
+    }
+    if (obj_victor.image_yscale == 1) { // right side up
+        y = obj_victor.y + lengthdir_y(r, theta);
+    }
+    else { // upside down
+        y = obj_victor.y - lengthdir_y(r, theta);
     }
     
-    if (x == obj_victor.x + r) {
+    if (obj_victor.image_xscale == 1 &amp;&amp; x == obj_victor.x + r
+        || obj_victor.image_xscale == -1 &amp;&amp; x == obj_victor.x - r
+        || obj_victor.image_yscale == 1 &amp;&amp; y == obj_victor.y - r
+        || obj_victor.image_yscale == -1 &amp;&amp; y == obj_victor.y + r) {
         theta_speed *= -1;
     }
     
@@ -78,11 +89,19 @@ if (!thrown) {
 // Thrown
 else {
 
+    if (obj_victor.grav &lt; 0 &amp;&amp; grav &gt; 0
+        || obj_victor.grav &gt; 0 &amp;&amp; grav &lt; 0) {
+        grav *= -1;
+    }
+
+    vsp += grav - (vsp/67);
+
     // Horizontal collision with wall
     if (place_meeting(x + hsp, y, obj_wall)) {
         while (!place_meeting(x + sign(hsp), y, obj_wall)) {
             x += sign(hsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -92,6 +111,7 @@ else {
         while (!place_meeting(x + sign(hsp), y, obj_dim1)) {
             x += sign(hsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -101,6 +121,7 @@ else {
         while (!place_meeting(x + sign(hsp), y, obj_dim2)) {
             x += sign(hsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -110,6 +131,7 @@ else {
         while (!place_meeting(x + sign(hsp), y, obj_dis)) {
             x += sign(hsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -119,6 +141,7 @@ else {
         while (!place_meeting(x, y + sign(vsp), obj_wall)) {
             y += sign(vsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -128,6 +151,7 @@ else {
         while (!place_meeting(x, y + sign(vsp), obj_dim1)) {
             y += sign(vsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -137,6 +161,7 @@ else {
         while (!place_meeting(x, y + sign(vsp), obj_dim2)) {
             y += sign(vsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -146,6 +171,7 @@ else {
         while (!place_meeting(x, y + sign(vsp), obj_dis)) {
             y += sign(vsp);
         }
+        grav = 0;
         hsp = 0;
         vsp = 0;
     }
@@ -159,10 +185,16 @@ else {
     x += hsp;
     y += vsp;
     
+    if (place_meeting(x, y, obj_victor)) {
+        obj_victor.numpy_out = false;
+        obj_health.image_index = 0;
+        instance_destroy();
+    }
+    
 }
 
 if (global.reset_numpy) {
-    show_debug_message("fucking died");
+    show_debug_message("set reset_numpy false");
     obj_victor.numpy_out = false;
     global.reset_numpy = false;
     instance_destroy();
@@ -225,8 +257,8 @@ instance_destroy();
         vsp *= -1;
     }
     
-    hsp /= 5;
-    vsp /= 5;
+    hsp /= 3;
+    vsp /= 3;
     
     show_debug_message("hsp: " + string(hsp));
     show_debug_message("vsp: " + string(vsp));
@@ -235,6 +267,28 @@ instance_destroy();
 }
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

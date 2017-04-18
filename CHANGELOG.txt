@@ -1,3 +1,16 @@
+--- 0.0.4 ---
+
++ Added sprites for Numpy
++ Fixed bugs with throwing Numpy.
++ Made Numpy only aim in the direction you are facing, whether left or right, upright or upside down.
++ Added camera views for bigger levels.
++ Implemented health bar over Victor. Depletes while Numpy is thrown.
++ Numpy can now be picked up after being thrown (you now pick him up when you teleport to him too).
++ Fixed bug where jumping into platforms from below would suck you into them and kill you.
+
+/ Made gravity affect Numpy's flight.
+/ Gave Numpy a faster initial velocity.
+
 --- 0.0.3 ---
 
 + Implemented aiming, throwing, sticking, throwing, and returning Numpy.

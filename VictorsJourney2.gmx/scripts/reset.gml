@@ -1,5 +1,7 @@
-global.reset_numpy = true;
-show_debug_message("set victor_reset true");
+if (obj_victor.numpy_out) {
+    global.reset_numpy = true;
+    show_debug_message("set reset_numpy true");
+}
 audio_play_sound(snd_die, 1, false);
 
 global.resetVisibility = true;

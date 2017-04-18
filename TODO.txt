@@ -1,25 +1,12 @@
----	Implement camera.
----	Implement health and regeneration.
---- Make Numpy relative to the way you're facing (upside down?).
+--- Fix teleporting into the ground.
+--- Make levels.
 
---	Make new sprites for Victor with Numpy.
 --	Make animation for Victor throwing and teleporting to Numpy?
---	Make sprite / animation for Numpy flying in the air?
+--	Should Victor keep his momentum when teleporting to Numpy?
 --	Decide on new sound effects / music.
---	Fix bug where Victor's head gets stuck flying vertically into wall.
 
 -	Make new (or just updated) title screen.
--	Go through old code and optimize / make more readable.
 -	Figure out how to draw text in a non-retarded way.
 -	Decide where to put out-of-bound hitboxes.
 -	Replace blocks of one type of object with single object?
--	Decide if we want a timer.
--	Do we want to be able to go back and forth through level doors?
-
-MECHANICS:
-
-- You start off the levels with Numpy on your back
-- When he is on your back you do not lose health but you cannot invert
-- You can throw him off your back into a wall / ceiling in a fixed arc
-- To regain Numpy, you can either collide with him or teleport to him
-- Once Numpy is regained you replenish you HP bar
+-	Should we get rid of the amount of inversions?

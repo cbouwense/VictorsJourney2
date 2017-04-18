@@ -1,7 +1,17 @@
 // Change sprite idle to same dimension
 if (dim == 1) {
-    sprite_index = spr_victor_idle_dim1;
+    if (obj_victor.numpy_out) {
+        sprite_index = spr_victor_idle_dim1;
+    }
+    else {
+        sprite_index = spr_victor_idle_dim1_n;
+    }
 }
 else {
-    sprite_index = spr_victor_idle_dim2;
+    if (obj_victor.numpy_out) {
+        sprite_index = spr_victor_idle_dim2;
+    }
+    else {
+        sprite_index = spr_victor_idle_dim2_n;
+    }
 }

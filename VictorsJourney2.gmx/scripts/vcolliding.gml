@@ -8,3 +8,6 @@ if (place_meeting(x, y + 1, obj_wall)
         || (place_meeting(x, y - 1, obj_dis) && obj_victor.image_yscale == -1 && global.blocksVisible)) {
     return true;        
 }
+else {
+    return false;
+}
