@@ -1,3 +1,7 @@
+--- 0.1.1 ---
+
++ Numpy's physics and sprites respond to changes in dimension.
+
 --- 0.1.0 ---
 
 + Detection for if Numpy is on the floor, a wall, or a ceiling. Victor teleports accordingly (fixes bug where Victor teleported into floor).

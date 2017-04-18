@@ -1,4 +1,3 @@
----	Make numpy fall if dimension changes and he was on that dimension block.
 --- Make levels.
 
 --	Make animation for Victor throwing and teleporting to Numpy.

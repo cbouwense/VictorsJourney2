@@ -152,7 +152,8 @@ vsp += grav - (vsp/67);
 //show_debug_message(string(vsp));
 
 // Jumping and sprite logic
-if (vcolliding()) {
+if (vcolliding(obj_victor)) {
+    //show_debug_message("vcolliding");
     // Jumping
     if (key_jump == 1) {
         audio_play_sound(snd_jump, 2, false);
